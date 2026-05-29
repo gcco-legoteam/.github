@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
+name: STD - ✨ Feature
+description: Propose a new feature or enhancement to an existing feature
+title: "[Feature] "
+projects: ["gcco-legoteam/13"]
+type: "Feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Feature Request Template
+        Use this form to propose a new feature or enhancement. Features can be standalone or part of a larger Epic.
+        
+        **Tips:**
+        - Clearly describe what you want to build and why
+        - Consider the user experience and how this will be used
+        - Link to parent Epics if this is part of a larger initiative
+        - Provide acceptance criteria that are testable and specific
+
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: Feature Type
+      description: Is this a new feature or an enhancement to existing functionality?
+      options:
+        - "✨ New Feature"
+        - "⚡ Enhancement / Extension"
+        - "🛠️ Refactor / Technical Improvement"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: What is this feature? Provide a clear, concise description of what needs to be built or improved.
+      placeholder: |
+        Describe the feature or enhancement in detail. Focus on:
+        - What users/systems will interact with
+        - How it works
+        - What problem it solves or what capability it enables
+        
+        Example: "Add ability to save custom report filters so users don't have to recreate them on each visit"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: textarea
+    id: user_benefit
+    attributes:
+      label: User Benefit & Value
+      description: Why is this feature valuable? What benefit does it provide to users or the business?
+      placeholder: |
+        - Who benefits from this feature?
+        - What problem does it solve?
+        - What is the expected user impact?
+        
+        Example: "Saves users 5-10 minutes per session by not having to reconfigure filters, improving productivity and user satisfaction"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What specific, testable conditions must be met for this feature to be considered complete?
+      placeholder: |
+        - Users can save up to 5 custom filters
+        - Saved filters persist across sessions
+        - Filters can be deleted or edited
+        - Feature works on desktop and mobile views
+        - Load time for filter list is <1 second
+        - Filters sync across all user devices within 30 seconds
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_stories
+    attributes:
+      label: Related User Stories
+      description: "Break this feature down into smaller user stories if applicable. (Optional - can create separate issues)"
+      placeholder: |
+        - [ ] As a user, I want to save my current report filters
+        - [ ] As a user, I want to load a previously saved filter with one click
+        - [ ] As a user, I want to edit or delete saved filters
+        - [ ] As an admin, I want to see which filters are most commonly used
+    validations:
+      required: false
+
+  - type: textarea
+    id: design_considerations
+    attributes:
+      label: Design & UX Considerations
+      description: How should this feature look and feel? Any UI/UX considerations?
+      placeholder: |
+        - Where in the UI should this feature be accessible?
+        - Any wireframes, mockups, or design references?
+        - Special accessibility or mobile considerations?
+        - Consistency with existing patterns?
+        
+        Example: "Add 'Save Filter' button next to existing 'Clear Filters' button. Use consistent styling with other form actions."
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical_considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical constraints, implementation details, or infrastructure requirements?
+      placeholder: |
+        - Storage requirements (database changes needed?)
+        - API changes or new endpoints required?
+        - Performance implications?
+        - Security/compliance considerations?
+        - Tech stack or libraries to use?
+        
+        Example: "Requires new table in database to store user filter preferences. Should use existing auth system for user identification."
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies & Prerequisites
+      description: Does this feature depend on other work being completed first?
+      placeholder: |
+        - Other features or tasks that must be completed first
+        - External dependencies (APIs, third-party services, etc.)
+        - Data or access that needs to be available
+        
+        Example: "Requires completion of authentication refactor (#456)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: testing_strategy
+    attributes:
+      label: Testing Strategy
+      description: How should this feature be tested?
+      placeholder: |
+        - Unit tests required for new functions
+        - Integration tests for database interactions
+        - Manual testing scenarios
+        - Browser/device compatibility testing
+        - Performance testing thresholds
+        
+        Example: "Unit tests for filter save/load logic. Manual testing across Chrome, Safari, Firefox. Load test with 1000 saved filters."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information, examples, screenshots, or references
+      placeholder: |
+        - Links to similar features in competitor products
+        - User feedback or requests that led to this feature
+        - Design mockups or prototypes
+        - Related discussions or issues: #123, #456
+        - Any external documentation or standards to follow
+    validations:
+      required: false

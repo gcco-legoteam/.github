@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
+name: STD - 🚨 Incident
+description: Incidents across any platform, service, tool, or operational process
+title: "[Incident]: "
+projects: ["gcco-legoteam/13"]
+type: "Incident"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to track incidents across any platform, service, tool, or operational process — Azure, GCP, AWS, internal tooling, automation, user-facing services, and more.
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected Area
+      options:
+        - Access / Permissions
+        - Automation / IaaS
+        - Billing / Cost Management
+        - Branding / UI
+        - Documentation / Content
+        - Infrastructure / Provisioning
+        - Monitoring / Alerting / Notification
+        - User Invitation / Onboarding
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: textarea
+    id: component
+    attributes:
+      label: Specific Component / Service
+      placeholder: e.g., User Invite Email, GCP Workload Script, Azure RBAC Module, DNS Record
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true

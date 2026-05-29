@@ -1,0 +1,66 @@
+﻿# yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
+name: STD - 🛠️ Maintenance
+description: Maintenance for operational, infrastructure, tooling, and configration
+title: "[Maint]: "
+projects: ["gcco-legoteam/13"]
+type: "Maintenance"
+body:
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Automation / IaaC
+        - Backup / Disaster Recovery
+        - Compute / VM / PaaS / Containers
+        - Networking / DNS / FW /etc.
+        - Monitoring / Alerting / Notification
+        - Storage / Data / DB
+        - Reporting / Cost Management
+        - Workload Provisioning
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: dropdown
+    id: teams-involved
+    attributes:
+      label: Teams Involved
+      multiple: true
+      options:
+        - EVO
+        - OPS
+        - External / Client
+    validations:
+      required: true
+
+  - type: textarea
+    id: description-what
+    attributes:
+      label: What needs doing?
+      description: Outline what work needs to be done and what's affected by this change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description-why
+    attributes:
+      label: Why does this needs doing?
+      description: Outline why work needs to be done.
+    validations:
+      required: true

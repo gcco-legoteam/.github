@@ -1,0 +1,94 @@
+name: STD - 📝 Documentation
+description: New documentation, updates to existing docs, runbooks, client guides, architecture records, and SOPs.
+title: "[Docs]: "
+type: Documentation
+projects: ["gcco-legoteam/13"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Task
+        Use this form to track the creation of new documentation or updates to existing docs, runbooks, SOPs, client guides, and architectural decision records.
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: Documentation Type
+      description: What kind of documentation needs to be created or updated?
+      options:
+        - New Documentation
+        - Update Existing Documentation
+        - Runbook / SOP
+        - Client Guide / Onboarding Material
+        - Architecture / Design Document
+        - Decision Record (ADR)
+        - Process Documentation
+        - Meeting Notes / Summary
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience
+      description: Who is this documentation intended for?
+      options:
+        - Internal
+        - Client-Facing
+        - Both
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What documentation needs to be created or updated? Why is it needed?
+    validations:
+      required: true
+
+  - type: input
+    id: existing_doc_link
+    attributes:
+      label: Link to Existing Document (if updating)
+      description: Provide a link to the document that needs updating, if applicable.
+      placeholder: https://...
+
+  - type: textarea
+    id: content_outline
+    attributes:
+      label: Proposed Content / Outline
+      description: A brief outline of what should be covered, or the sections that need updating.
+      placeholder: |
+        - Section 1: Overview
+        - Section 2: Prerequisites
+        - Section 3: Step-by-step instructions
+        - Section 4: Troubleshooting
+
+  - type: textarea
+    id: subject_matter_expert
+    attributes:
+      label: Subject Matter Expert
+      description: Who has the knowledge to write or review this documentation?
+      placeholder: e.g. @teammate, or "TBD"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Related issues, references, source material, or any other relevant context.
