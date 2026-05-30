@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://www.schemastore.org/github-issue-config.json
+blank_issues_enabled: false
+contact_links:
+  - name: New Idea or Suggestion
+    url: https://github.com/orgs/gcco-legoteam/discussions
+    about: Have an idea or suggestion that's not yet a concrete work item? Start a discussion instead.
