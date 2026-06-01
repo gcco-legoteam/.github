@@ -23,18 +23,26 @@ jobs:
           private-key: ${{ secrets.ORG_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
 
-      - name: List org repos
+      - name: Find repos with issue templates
         id: list
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           current_repo="${{ github.event.repository.name }}"
-          repos=$(gh api "orgs/${{ github.repository_owner }}/repos" \
+          owner="${{ github.repository_owner }}"
+          repos=()
+          while IFS= read -r repo; do
+            response=$(gh api "repos/${owner}/${repo}/contents/.github/ISSUE_TEMPLATE" 2>/dev/null) \
+              && count=$(echo "$response" | jq 'if type == "array" then length else 0 end') \
+              || count=0
+            if [[ "$count" -gt 0 ]]; then
+              repos+=("$repo")
+            fi
+          done < <(gh api "orgs/${owner}/repos" \
             --paginate \
             --jq '.[].name' \
-            | grep -v "^${current_repo}$" \
-            | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          echo "repos=${repos}" >> "$GITHUB_OUTPUT"
+            | grep -v "^${current_repo}$")
+          echo "repos=$(printf '%s\n' "${repos[@]}" | jq -R -s -c 'split("\n") | map(select(length > 0))')" >> "$GITHUB_OUTPUT"
 
   replicate:
     name: Replicate to ${{ matrix.repo }}
@@ -55,26 +63,12 @@ jobs:
           private-key: ${{ secrets.ORG_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
 
-      - name: Check if destination repo has ISSUE_TEMPLATE files
-        id: check
-        env:
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: |
-          response=$(gh api \
-            "repos/${{ github.repository_owner }}/${{ matrix.repo }}/contents/.github/ISSUE_TEMPLATE" \
-            2>/dev/null) \
-            && count=$(echo "$response" | jq 'if type == "array" then length else 0 end') \
-            || count=0
-          echo "Found ${count} templates in repo ${{ github.repository_owner }}/${{ matrix.repo }}."
-          echo "count=${count}" >> "$GITHUB_OUTPUT"
-
       - name: Checkout source repo
         uses: actions/checkout@v6
         with:
           path: source
 
       - name: Checkout destination repo
-        if: steps.check.outputs.count != '0'
         uses: actions/checkout@v6
         with:
           repository: ${{ github.repository_owner }}/${{ matrix.repo }}
@@ -82,13 +76,11 @@ jobs:
           path: dest
 
       - name: Update STD templates
-        if: steps.check.outputs.count != '0'
         run: |
           find dest/.github/ISSUE_TEMPLATE -name 'zz_*.yaml' -delete
           cp source/.github/ISSUE_TEMPLATE/zz_*.yaml dest/.github/ISSUE_TEMPLATE/
 
       - name: Commit and push
-        if: steps.check.outputs.count != '0'
         working-directory: dest
         run: |
           git config user.name "github-actions[bot]"
