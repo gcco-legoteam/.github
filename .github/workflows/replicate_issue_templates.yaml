@@ -60,9 +60,12 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          count=$(gh api \
+          response=$(gh api \
             "repos/${{ github.repository_owner }}/${{ matrix.repo }}/contents/.github/ISSUE_TEMPLATE" \
-            --jq 'if type == "array" then length else 0 end' 2>/dev/null || echo "0")
+            2>/dev/null) \
+            && count=$(echo "$response" | jq 'if type == "array" then length else 0 end') \
+            || count=0
+          echo "Found ${count} templates in repo ${{ github.repository_owner }}/${{ matrix.repo }}."
           echo "count=${count}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout source repo
