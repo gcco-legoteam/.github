@@ -1,6 +1,7 @@
 name: Replicate Issue Templates
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -36,7 +37,7 @@ jobs:
       matrix:
         repo: ${{ fromJson(needs.list-repos.outputs.repos) }}
       fail-fast: false
-      
+
     steps:
       - name: Check if destination repo has ISSUE_TEMPLATE files
         id: check
