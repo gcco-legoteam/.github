@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
+name: 🎫 Task *
+description: Report a task or action item across any platform, tool, or client-facing service.
+title: "[Task]: "
+projects: ["gcco-legoteam/13"]
+type: "Task"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task
+        Use this form to document tasks or action items across any platform, tool, or system. 
+        
+        Fill in as much detail as you can to help triage and resolve quickly.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which functional area does this task affect?
+      options:
+        - Platform & Infrastructure
+        - Client Experience
+        - Branding & Communications
+        - Security & Compliance
+        - CRM (Budibase)
+        - User Invitations & Onboarding
+        - Notifications
+        - Operations & Internal Tools
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: dropdown
+    id: teams-involved
+    attributes:
+      label: Teams Involved
+      multiple: true
+      options:
+        - EVO
+        - OPS
+        - External / Client
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: A clear and concise description of the task or action item.
+      placeholder: |
+        Describe the task or action item. 
+        Include steps to complete the task, and any relevant context or links to related issues.
+    validations:
+      required: true
