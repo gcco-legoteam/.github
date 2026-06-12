@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
-name: STD - 🚨 Incident
+name: 🚨 Incident *
 description: Incidents across any platform, service, tool, or operational process
 title: "[Incident]: "
 projects: ["gcco-legoteam/13"]
@@ -40,6 +40,18 @@ body:
         - GitHub
         - Multi-Cloud
         - N/A
+
+  - type: dropdown
+    id: teams-involved
+    attributes:
+      label: Teams Involved
+      multiple: true
+      options:
+        - EVO
+        - OPS
+        - External / Client
+    validations:
+      required: true
 
   - type: textarea
     id: component

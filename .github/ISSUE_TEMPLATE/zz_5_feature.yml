@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
-name: STD - ✨ Feature
+name: ✨ Feature *
 description: Propose a new feature or enhancement to an existing feature
 title: "[Feature] "
 projects: ["gcco-legoteam/13"]
@@ -29,6 +29,32 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: cloud_platform
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - Multi-Cloud
+        - N/A
+
+  - type: dropdown
+    id: teams-involved
+    attributes:
+      label: Teams Involved
+      multiple: true
+      options:
+        - EVO
+        - OPS
+        - External / Client
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:
@@ -43,20 +69,6 @@ body:
         Example: "Add ability to save custom report filters so users don't have to recreate them on each visit"
     validations:
       required: true
-
-  - type: dropdown
-    id: cloud_platform
-    attributes:
-      label: Cloud Platform
-      multiple: true
-      options:
-        - Azure
-        - AWS
-        - GCP
-        - Entra ID
-        - GitHub
-        - Multi-Cloud
-        - N/A
 
   - type: textarea
     id: user_benefit
@@ -97,80 +109,5 @@ body:
         - [ ] As a user, I want to load a previously saved filter with one click
         - [ ] As a user, I want to edit or delete saved filters
         - [ ] As an admin, I want to see which filters are most commonly used
-    validations:
-      required: false
-
-  - type: textarea
-    id: design_considerations
-    attributes:
-      label: Design & UX Considerations
-      description: How should this feature look and feel? Any UI/UX considerations?
-      placeholder: |
-        - Where in the UI should this feature be accessible?
-        - Any wireframes, mockups, or design references?
-        - Special accessibility or mobile considerations?
-        - Consistency with existing patterns?
-        
-        Example: "Add 'Save Filter' button next to existing 'Clear Filters' button. Use consistent styling with other form actions."
-    validations:
-      required: false
-
-  - type: textarea
-    id: technical_considerations
-    attributes:
-      label: Technical Considerations
-      description: Any technical constraints, implementation details, or infrastructure requirements?
-      placeholder: |
-        - Storage requirements (database changes needed?)
-        - API changes or new endpoints required?
-        - Performance implications?
-        - Security/compliance considerations?
-        - Tech stack or libraries to use?
-        
-        Example: "Requires new table in database to store user filter preferences. Should use existing auth system for user identification."
-    validations:
-      required: false
-
-  - type: textarea
-    id: dependencies
-    attributes:
-      label: Dependencies & Prerequisites
-      description: Does this feature depend on other work being completed first?
-      placeholder: |
-        - Other features or tasks that must be completed first
-        - External dependencies (APIs, third-party services, etc.)
-        - Data or access that needs to be available
-        
-        Example: "Requires completion of authentication refactor (#456)"
-    validations:
-      required: false
-
-  - type: textarea
-    id: testing_strategy
-    attributes:
-      label: Testing Strategy
-      description: How should this feature be tested?
-      placeholder: |
-        - Unit tests required for new functions
-        - Integration tests for database interactions
-        - Manual testing scenarios
-        - Browser/device compatibility testing
-        - Performance testing thresholds
-        
-        Example: "Unit tests for filter save/load logic. Manual testing across Chrome, Safari, Firefox. Load test with 1000 saved filters."
-    validations:
-      required: false
-
-  - type: textarea
-    id: additional_context
-    attributes:
-      label: Additional Context
-      description: Any other relevant information, examples, screenshots, or references
-      placeholder: |
-        - Links to similar features in competitor products
-        - User feedback or requests that led to this feature
-        - Design mockups or prototypes
-        - Related discussions or issues: #123, #456
-        - Any external documentation or standards to follow
     validations:
       required: false
