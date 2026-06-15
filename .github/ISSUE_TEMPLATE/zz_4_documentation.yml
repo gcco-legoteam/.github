@@ -1,8 +1,8 @@
 name: 📝 Documentation *
 description: New documentation, updates to existing docs, runbooks, client guides, architecture records, and SOPs.
-title: "[Docs] "
-type: Documentation
+title: "[Docs]: "
 projects: ["gcco-legoteam/13"]
+type: "Documentation"
 body:
   - type: markdown
     attributes:
@@ -11,7 +11,7 @@ body:
         Use this form to track the creation of new documentation or updates to existing docs, runbooks, SOPs, client guides, and architectural decision records.
 
   - type: dropdown
-    id: doc_type
+    id: doc
     attributes:
       label: Documentation Type
       description: What kind of documentation needs to be created or updated?
@@ -40,7 +40,7 @@ body:
       required: true
 
   - type: dropdown
-    id: cloud_platform
+    id: csp
     attributes:
       label: Cloud Platform
       multiple: true
@@ -53,7 +53,7 @@ body:
         - Multi-Cloud
         - N/A
   - type: dropdown
-    id: teams-involved
+    id: team
     attributes:
       label: Teams Involved
       multiple: true

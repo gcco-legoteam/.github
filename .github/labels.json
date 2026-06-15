@@ -1,0 +1,252 @@
+[
+  {
+    "name": "type: incident",
+    "color": "d93f0b",
+    "description": "Incident across any platform, service, tool, or operational process"
+  },
+  {
+    "name": "type: bug",
+    "color": "b60205",
+    "description": "Bug or unexpected behaviour"
+  },
+  {
+    "name": "type: maintenance",
+    "color": "e4e669",
+    "description": "Maintenance for operational, infrastructure, tooling, and configuration"
+  },
+  {
+    "name": "type: documentation",
+    "color": "0075ca",
+    "description": "New or updated documentation"
+  },
+  {
+    "name": "type: feature",
+    "color": "0e8a16",
+    "description": "New feature or enhancement"
+  },
+  {
+    "name": "type: task",
+    "color": "6f42c1",
+    "description": "Task or action item"
+  },
+  {
+    "name": "area: access",
+    "color": "c5def5",
+    "description": "Related to access controls or permissions"
+  },
+  {
+    "name": "area: automation",
+    "color": "c5def5",
+    "description": "Automation or Infrastructure-as-Code"
+  },
+  {
+    "name": "area: backup & dr",
+    "color": "c5def5",
+    "description": "Backup processes or disaster recovery"
+  },
+  {
+    "name": "area: billing & cost",
+    "color": "c5def5",
+    "description": "Billing, reporting, and cost management"
+  },
+  {
+    "name": "area: branding & ui",
+    "color": "c5def5",
+    "description": "Branding, UI, and communications"
+  },
+  {
+    "name": "area: client experience",
+    "color": "c5def5",
+    "description": "Client-facing experience or service delivery"
+  },
+  {
+    "name": "area: compute",
+    "color": "c5def5",
+    "description": "Compute resources, VMs, PaaS, or container workloads"
+  },
+  {
+    "name": "area: crm",
+    "color": "c5def5",
+    "description": "CRM platform (Budibase)"
+  },
+  {
+    "name": "area: docs & content",
+    "color": "c5def5",
+    "description": "Documentation or content-related"
+  },
+  {
+    "name": "area: infrastructure",
+    "color": "c5def5",
+    "description": "Infrastructure or resource provisioning"
+  },
+  {
+    "name": "area: monitoring",
+    "color": "c5def5",
+    "description": "Monitoring, alerting, or notification systems"
+  },
+  {
+    "name": "area: networking",
+    "color": "c5def5",
+    "description": "Networking, DNS, firewalls, and related configuration"
+  },
+  {
+    "name": "area: notifications",
+    "color": "c5def5",
+    "description": "Notification delivery or configuration"
+  },
+  {
+    "name": "area: onboarding",
+    "color": "c5def5",
+    "description": "User invitations and onboarding process"
+  },
+  {
+    "name": "area: operations",
+    "color": "c5def5",
+    "description": "Internal operations and tooling"
+  },
+  {
+    "name": "area: platform",
+    "color": "c5def5",
+    "description": "Platform and infrastructure layer"
+  },
+  {
+    "name": "area: provisioning",
+    "color": "c5def5",
+    "description": "Workload provisioning and deployment"
+  },
+  {
+    "name": "area: security & compliance",
+    "color": "c5def5",
+    "description": "Security controls or compliance requirements"
+  },
+  {
+    "name": "area: storage",
+    "color": "c5def5",
+    "description": "Storage, data, or database layer"
+  },
+  {
+    "name": "area: other",
+    "color": "c5def5",
+    "description": "Area not covered by existing labels"
+  },
+  {
+    "name": "platform: azure",
+    "color": "bfd4f2",
+    "description": "Microsoft Azure"
+  },
+  {
+    "name": "platform: aws",
+    "color": "bfd4f2",
+    "description": "Amazon Web Services"
+  },
+  {
+    "name": "platform: gcp",
+    "color": "bfd4f2",
+    "description": "Google Cloud Platform"
+  },
+  {
+    "name": "platform: entra id",
+    "color": "bfd4f2",
+    "description": "Microsoft Entra ID (formerly Azure AD)"
+  },
+  {
+    "name": "platform: github",
+    "color": "bfd4f2",
+    "description": "GitHub platform"
+  },
+  {
+    "name": "platform: multi-cloud",
+    "color": "bfd4f2",
+    "description": "Spans multiple cloud platforms"
+  },
+  {
+    "name": "platform: n/a",
+    "color": "bfd4f2",
+    "description": "Not applicable to a specific cloud platform"
+  },
+  {
+    "name": "team: evo",
+    "color": "c2e0c6",
+    "description": "EVO team involvement"
+  },
+  {
+    "name": "team: ops",
+    "color": "c2e0c6",
+    "description": "OPS team involvement"
+  },
+  {
+    "name": "team: external",
+    "color": "c2e0c6",
+    "description": "External or client involvement"
+  },
+  {
+    "name": "doc: new",
+    "color": "c0d8e4",
+    "description": "Creating new documentation from scratch"
+  },
+  {
+    "name": "doc: update",
+    "color": "c0d8e4",
+    "description": "Updating or revising existing documentation"
+  },
+  {
+    "name": "doc: runbook",
+    "color": "c0d8e4",
+    "description": "Runbook or standard operating procedure"
+  },
+  {
+    "name": "doc: client guide",
+    "color": "c0d8e4",
+    "description": "Client-facing guide or onboarding material"
+  },
+  {
+    "name": "doc: architecture",
+    "color": "c0d8e4",
+    "description": "Architecture or design decision record"
+  },
+  {
+    "name": "doc: process",
+    "color": "c0d8e4",
+    "description": "Process or workflow documentation"
+  },
+  {
+    "name": "doc: meeting notes",
+    "color": "c0d8e4",
+    "description": "Meeting notes or summary"
+  },
+  {
+    "name": "doc: other",
+    "color": "c0d8e4",
+    "description": "Documentation type not covered by existing labels"
+  },
+  {
+    "name": "audience: internal",
+    "color": "fce8c0",
+    "description": "Documentation intended for internal team members"
+  },
+  {
+    "name": "audience: client-facing",
+    "color": "fce8c0",
+    "description": "Documentation intended for clients"
+  },
+  {
+    "name": "audience: both",
+    "color": "fce8c0",
+    "description": "Documentation intended for both internal and client audiences"
+  },
+  {
+    "name": "feature: new",
+    "color": "d4c5f9",
+    "description": "A net-new feature"
+  },
+  {
+    "name": "feature: enhancement",
+    "color": "d4c5f9",
+    "description": "Enhancement or extension of existing functionality"
+  },
+  {
+    "name": "feature: refactor",
+    "color": "d4c5f9",
+    "description": "Technical refactor or internal improvement"
+  }
+]
