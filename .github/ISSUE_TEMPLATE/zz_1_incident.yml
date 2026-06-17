@@ -16,7 +16,7 @@ body:
       label: Area
       options:
         - Access / Permissions
-        - Automation / IaaC
+        - Automation / IaC
         - Billing / Reporting / Cost Management
         - Branding / UI
         - Documentation / Content

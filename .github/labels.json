@@ -1,35 +1,5 @@
 [
   {
-    "name": "type: incident",
-    "color": "d93f0b",
-    "description": "Incident across any platform, service, tool, or operational process"
-  },
-  {
-    "name": "type: bug",
-    "color": "b60205",
-    "description": "Bug or unexpected behaviour"
-  },
-  {
-    "name": "type: maintenance",
-    "color": "e4e669",
-    "description": "Maintenance for operational, infrastructure, tooling, and configuration"
-  },
-  {
-    "name": "type: documentation",
-    "color": "0075ca",
-    "description": "New or updated documentation"
-  },
-  {
-    "name": "type: feature",
-    "color": "0e8a16",
-    "description": "New feature or enhancement"
-  },
-  {
-    "name": "type: task",
-    "color": "6f42c1",
-    "description": "Task or action item"
-  },
-  {
     "name": "area: access",
     "color": "c5def5",
     "description": "Related to access controls or permissions"

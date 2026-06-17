@@ -11,7 +11,7 @@ body:
     attributes:
       label: Area
       options:
-        - Automation / IaaC
+        - Automation / IaC
         - Backup / Disaster Recovery
         - Compute / VM / PaaS / Containers
         - Networking / DNS / FW /etc.
