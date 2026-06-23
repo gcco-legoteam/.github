@@ -7,24 +7,24 @@ type: "Maintenance"
 body:
 
   - type: dropdown
-    id: category
+    id: area
     attributes:
-      label: Category
+      label: Area
       options:
-        - Automation / IaaC
+        - Automation / IaC
         - Backup / Disaster Recovery
         - Compute / VM / PaaS / Containers
         - Networking / DNS / FW /etc.
         - Monitoring / Alerting / Notification
         - Storage / Data / DB
-        - Reporting / Cost Management
+        - Billing / Reporting / Cost Management
         - Workload Provisioning
         - Other
     validations:
       required: true
 
   - type: dropdown
-    id: cloud_platform
+    id: csp
     attributes:
       label: Cloud Platform
       multiple: true
@@ -38,7 +38,7 @@ body:
         - N/A
 
   - type: dropdown
-    id: teams-involved
+    id: team
     attributes:
       label: Teams Involved
       multiple: true

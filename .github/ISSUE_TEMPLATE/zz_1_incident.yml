@@ -11,24 +11,24 @@ body:
         Use this template to track incidents across any platform, service, tool, or operational process — Azure, GCP, AWS, internal tooling, automation, user-facing services, and more.
 
   - type: dropdown
-    id: affected-area
+    id: area
     attributes:
-      label: Affected Area
+      label: Area
       options:
         - Access / Permissions
-        - Automation / IaaS
-        - Billing / Cost Management
+        - Automation / IaC
+        - Billing / Reporting / Cost Management
         - Branding / UI
         - Documentation / Content
         - Infrastructure / Provisioning
         - Monitoring / Alerting / Notification
-        - User Invitation / Onboarding
+        - User Invitations / Onboarding
         - Other
     validations:
       required: true
 
   - type: dropdown
-    id: cloud_platform
+    id: csp
     attributes:
       label: Cloud Platform
       multiple: true
@@ -42,7 +42,7 @@ body:
         - N/A
 
   - type: dropdown
-    id: teams-involved
+    id: team
     attributes:
       label: Teams Involved
       multiple: true

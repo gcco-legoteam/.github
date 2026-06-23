@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
 name: ✨ Feature *
-description: Propose a new feature or enhancement to an existing feature
-title: "[Feature] "
+description: Propose a new thing, or an enhancement to an existing thing
+title: "[Feature]: "
 projects: ["gcco-legoteam/13"]
 type: "Feature"
 body:
@@ -18,7 +18,7 @@ body:
         - Provide acceptance criteria that are testable and specific
 
   - type: dropdown
-    id: feature_type
+    id: feature
     attributes:
       label: Feature Type
       description: Is this a new feature or an enhancement to existing functionality?
@@ -30,7 +30,7 @@ body:
       required: true
 
   - type: dropdown
-    id: cloud_platform
+    id: csp
     attributes:
       label: Cloud Platform
       multiple: true
@@ -44,7 +44,7 @@ body:
         - N/A
 
   - type: dropdown
-    id: teams-involved
+    id: team
     attributes:
       label: Teams Involved
       multiple: true
@@ -97,7 +97,7 @@ body:
         - Load time for filter list is <1 second
         - Filters sync across all user devices within 30 seconds
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: user_stories

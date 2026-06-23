@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
 name: 🐛 Bug Report *
 description: Report a bug or unexpected behaviour across any platform, tool, or client-facing service.
-title: "[Bug] "
+title: "[Bug]: "
 projects: ["gcco-legoteam/13"]
 type: "Bug"
 body:
@@ -21,10 +21,10 @@ body:
       options:
         - Platform & Infrastructure
         - Client Experience
-        - Branding & Communications
+        - Branding / UI
         - Security & Compliance
         - CRM (Budibase)
-        - User Invitations & Onboarding
+        - User Invitations / Onboarding
         - Notifications
         - Operations & Internal Tools
         - Other
@@ -32,7 +32,7 @@ body:
       required: true
 
   - type: dropdown
-    id: cloud_platform
+    id: csp
     attributes:
       label: Cloud Platform
       multiple: true
@@ -46,7 +46,7 @@ body:
         - N/A
 
   - type: dropdown
-    id: teams-involved
+    id: team
     attributes:
       label: Teams Involved
       multiple: true
