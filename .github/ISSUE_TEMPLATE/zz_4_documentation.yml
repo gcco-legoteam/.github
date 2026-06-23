@@ -50,8 +50,8 @@ body:
         - GCP
         - Entra ID
         - GitHub
-        - Multi-Cloud
         - N/A
+
   - type: dropdown
     id: team
     attributes:

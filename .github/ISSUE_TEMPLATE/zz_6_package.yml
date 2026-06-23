@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://www.schemastore.org/github-issue-forms.json
+name: 📦 Package *
+description: Medium block of work, broken down
+title: "[Package]: "
+projects: ["gcco-legoteam/13"]
+type: "Package"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Work Package Template
+        Use this to break down a Feature into more manageble work packages. Would generally be smaller in scope/complexity than a Feature, but more than a Task.
+        
+        **Tips:**
+        - Clearly describe what you want to build and why
+        - Consider the user experience and how this will be used
+        - Link to parent Features if this is part of a larger initiative
+        - Provide acceptance criteria that are testable and specific
+
+  - type: dropdown
+    id: csp
+    attributes:
+      label: Cloud Platform
+      multiple: true
+      options:
+        - Azure
+        - AWS
+        - GCP
+        - Entra ID
+        - GitHub
+        - N/A
+
+  - type: dropdown
+    id: team
+    attributes:
+      label: Teams Involved
+      multiple: true
+      options:
+        - EVO
+        - OPS
+        - External / Client
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Package Description
+      description: What is this Package? Provide a clear, concise description of what needs to be built or improved.
+      placeholder: |
+        Describe the package in detail. Focus on:
+        - What work is required to complete this package
+        - How does it feed up to the Feature
+        
+        Example: "Improving Security Secure Score Advisor Recommendations"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_benefit
+    attributes:
+      label: User Benefit & Value
+      description: Why is this package valuable? What benefit does it provide to users or the business?
+      placeholder: |
+        - Who benefits from this feature?
+        - What problem does it solve?
+        - What is the expected user impact?
+        
+        Example: "Ensures higher security compliance"
+    validations:
+      required: true
