@@ -15,7 +15,7 @@
     "description": "Backup processes or disaster recovery"
   },
   {
-    "name": "area: billing & cost",
+    "name": "area: billing & costing",
     "color": "c5def5",
     "description": "Billing, reporting, and cost management"
   },
@@ -90,16 +90,6 @@
     "description": "Security controls or compliance requirements"
   },
   {
-    "name": "area: storage",
-    "color": "c5def5",
-    "description": "Storage, data, or database layer"
-  },
-  {
-    "name": "area: other",
-    "color": "c5def5",
-    "description": "Area not covered by existing labels"
-  },
-  {
     "name": "platform: azure",
     "color": "bfd4f2",
     "description": "Microsoft Azure"
@@ -123,16 +113,6 @@
     "name": "platform: github",
     "color": "bfd4f2",
     "description": "GitHub platform"
-  },
-  {
-    "name": "platform: multi-cloud",
-    "color": "bfd4f2",
-    "description": "Spans multiple cloud platforms"
-  },
-  {
-    "name": "platform: n/a",
-    "color": "bfd4f2",
-    "description": "Not applicable to a specific cloud platform"
   },
   {
     "name": "team: evo",
@@ -200,11 +180,6 @@
     "description": "Documentation intended for clients"
   },
   {
-    "name": "audience: both",
-    "color": "fce8c0",
-    "description": "Documentation intended for both internal and client audiences"
-  },
-  {
     "name": "feature: new",
     "color": "d4c5f9",
     "description": "A net-new feature"
@@ -218,5 +193,65 @@
     "name": "feature: refactor",
     "color": "d4c5f9",
     "description": "Technical refactor or internal improvement"
+  },
+  {
+    "name": "tech: dns",
+    "color": "f9d0c4",
+    "description": "DNS configuration or related issues"
+  },
+  {
+    "name": "tech: f5",
+    "color": "f9d0c4",
+    "description": "F5 configuration or related issues"
+  },
+  {
+    "name": "tech: gh action",
+    "color": "f9d0c4",
+    "description": "GitHub Actions configuration or related issues"
+  },
+  {
+    "name": "tech: fnapp",
+    "color": "f9d0c4",
+    "description": "Azure Function App configuration or related issues"
+  },
+  {
+    "name": "tech: container",
+    "color": "f9d0c4",
+    "description": "Container configuration or related issues"
+  },
+  {
+    "name": "tech: terraform",
+    "color": "f9d0c4",
+    "description": "Terraform configuration or related issues"
+  },
+  {
+    "name": "tech: certificate",
+    "color": "f9d0c4",
+    "description": "Certificate configuration or related issues"
+  },
+  {
+    "name": "lang: python",
+    "color": "d90d0b",
+    "description": "Python programming language"
+  },
+  {
+    "name": "lang: powershell",
+    "color": "d90d0b",
+    "description": "PowerShell scripting language"
+  },
+  {
+    "name": "lang: bash",
+    "color": "d90d0b",
+    "description": "Bash scripting language"
+  },
+  {
+    "name": "lang: terraform",
+    "color": "d90d0b",
+    "description": "Terraform configuration language"
+  },
+  {
+    "name": "lang: javascript",
+    "color": "d90d0b",
+    "description": "JavaScript programming language"
   }
 ]
